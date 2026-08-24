@@ -1,0 +1,5 @@
+# Ignorar o arquivo especifico
+SAMPLE_ENERGY_DATA.csv
+
+# Ou ignorar qualquer arquivo CSV da pasta
+*.csv
