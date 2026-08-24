@@ -1,0 +1,17 @@
+Steel Industry Energy Consumption - Consumo energético de uma indústria siderúrgica, com potência reativa, fator de potência, CO2 e classificação de carga.
+
+Dataset 2 — Steel Industry Energy Consumption (UCI) 
+
+Situação 
+
+A equipe de gestão de energia de uma indústria siderúrgica deseja localizar situações de consumo elevado e verificar se esses períodos coincidem com condições de carga elevada ou valores menos favoráveis de fator de potência. 
+
+Explique por que esse segundo conjunto de registros pode merecer maior atenção da equipe de energia:
+
+Análise do Conjunto Crítico (Consumo Elevado + Fator de Potência Baixo):
+A combinação de alto consumo de energia (kWh) com um fator de potência baixo representa o cenário operacional de menor eficiência na indústria siderúrgica.    
+    Encargos Financeiros e Penalidades: Um fator de potência reduzido indica alto consumo de energia reativa. As concessionárias de energia elétrica costumam cobrar multas e tarifas adicionais por excede de energia reativa ou baixo FP.
+    
+    Sobrecarga de Infraestrutura: Operar com carga elevada e FP ruim desgasta componentes como transformadores, cabos e quadros de distribuição, gerando perdas por efeito Joule (aquecimento) e risco de paradas não programadas.
+
+    Ação Preventiva: Identificar esses períodos específicos permite que a equipe de gestão planeje o redimensionamento de bancos de capacitores ou o escalonamento do acionamento de grandes máquinas e motores industriais.

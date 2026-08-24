@@ -1,0 +1,11 @@
+Appliances Energy Prediction  - Consumo de eletrodomésticos em uma residência, associado a temperatura, umidade e condições ambientais. 
+
+Dataset 1 — Appliances Energy Prediction (UCI) 
+
+Situação 
+
+Uma empresa de eficiência energética está analisando o comportamento de uma residência de baixo consumo. A equipe deseja identificar períodos de consumo elevado dos eletrodomésticos e observar quais condições de temperatura e umidade estavam presentes nesses momentos. 
+
+EFEITO DA INCLUSAO DA TEMPERATURA COMO SEGUNDO CRITERIO:
+
+A inclusão da temperatura ($T1$) acima da média como segundo critério atua como um filtro mais restritivo (operação lógica AND). Isso reduz o número total de registros selecionados, permitindo isolar exclusivamente os momentos de pico de consumo de energia que ocorreram em cenários onde o ambiente interno estava mais aquecido. Essa análise conjunta ajuda a verificar se o uso elevado de eletrodomésticos tem correlação direta com variações de temperatura na residência.
