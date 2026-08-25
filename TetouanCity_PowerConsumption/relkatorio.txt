@@ -1,0 +1,12 @@
+Dataset 3 — Power Consumption of Tetouan City (UCI)
+
+Situação 
+
+Uma equipe responsável pelo planejamento da distribuição de energia em Tétouan deseja identificar qual das três zonas apresenta o maior pico de consumo e observar as condições ambientais registradas nos momentos de maior demanda.
+
+Explicação da redução no número de registros:
+    A quantidade de registros caiu de qtd_consumo_alto para qtd_critico devido ao encadeamento de uma segunda restrição usando o operador lógico AND (&).
+
+    Mecanismo de Filtro: Nem todo pico de demanda elétrica ocorre obrigatoriamente em dias quentes. Ao adicionar a exigência de que a temperatura esteja acima da média (Temperatura > temp_media), descartamos os momentos em que a zona teve alta carga por razões alheias ao calor (como uso noturno de equipamentos comerciais ou iluminação).
+
+    Impacto na Gestão: O subconjunto final isola apenas os momentos em que o pico de demanda coincide com temperaturas elevadas, permitindo que a equipe identifique eventos críticos em que o consumo de ar-condicionado/refrigeração sobrecarrega a rede de distribuição.

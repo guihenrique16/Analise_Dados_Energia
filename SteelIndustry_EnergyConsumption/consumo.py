@@ -2,44 +2,44 @@ import pandas as pd
 import numpy as np
 
 
-# # ETAPA A — Simulando o Orange Data Mining no Python / Pandas
+# ETAPA A — Simulando o Orange Data Mining no Python / Pandas
 
-# # https://archive.ics.uci.edu/dataset/851/steel+industry+energy+consumption
-# df_original = pd.read_csv('Steel_industry_data.csv')
+# https://archive.ics.uci.edu/dataset/851/steel+industry+energy+consumption
+df_original = pd.read_csv('Steel_industry_data.csv')
 
-# print("--- [ETAPA A] Dataset Original Carregado ---")
-# print(f"Linhas/Colunas originais: {df_original.shape}")
+print("--- [ETAPA A] Dataset Original Carregado ---")
+print(f"Linhas/Colunas originais: {df_original.shape}")
 
-# # 2. Seleção de Colunas (Widget Select Columns)
-# colunas_selecionadas = [
-#     'Usage_kWh', 
-#     'Lagging_Current_Reactive.Power_kVarh',
-#     'Leading_Current_Reactive_Power_kVarh', 
-#     'Lagging_Current_Power_Factor', 
-#     'Leading_Current_Power_Factor', 
-#     'WeekStatus', 
-#     'Day_of_week', 
-#     'Load_Type'
-# ]
-# df_filtrado = df_original[colunas_selecionadas].copy()
+# 2. Seleção de Colunas (Widget Select Columns)
+colunas_selecionadas = [
+    'Usage_kWh', 
+    'Lagging_Current_Reactive.Power_kVarh',
+    'Leading_Current_Reactive_Power_kVarh', 
+    'Lagging_Current_Power_Factor', 
+    'Leading_Current_Power_Factor', 
+    'WeekStatus', 
+    'Day_of_week', 
+    'Load_Type'
+]
+df_filtrado = df_original[colunas_selecionadas].copy()
 
-# # 3. Observar categorias e valores ausentes (Widget Data Table)
-# print("\n--- Categorias em Load_Type ---")
-# print(df_filtrado['Load_Type'].value_counts())
+# 3. Observar categorias e valores ausentes (Widget Data Table)
+print("\n--- Categorias em Load_Type ---")
+print(df_filtrado['Load_Type'].value_counts())
 
-# print("\n--- Categorias em WeekStatus ---")
-# print(df_filtrado['WeekStatus'].value_counts())
+print("\n--- Categorias em WeekStatus ---")
+print(df_filtrado['WeekStatus'].value_counts())
 
-# print("\n--- Verificação de Valores Ausentes ---")
-# print(df_filtrado.isnull().sum())
+print("\n--- Verificação de Valores Ausentes ---")
+print(df_filtrado.isnull().sum())
 
-# # 4. Amostragem aleatória de 20% (Widget Data Sampler)
-# amostra = df_filtrado.sample(frac=0.20, random_state=42).reset_index(drop=True)
-# print(f"\nTamanho da amostra (20%): {amostra.shape}")
+# 4. Amostragem aleatória de 20% (Widget Data Sampler)
+amostra = df_filtrado.sample(frac=0.20, random_state=42).reset_index(drop=True)
+print(f"\nTamanho da amostra (20%): {amostra.shape}")
 
-# # 5. Exportar a amostra em CSV (Widget Save Data)
-# amostra.to_csv("amostra_steel_industry_20pct.csv", index=False)
-# print("Amostra salva como 'amostra_steel_industry_20pct.csv' com sucesso!\n")
+# 5. Exportar a amostra em CSV (Widget Save Data)
+amostra.to_csv("amostra_steel_industry_20pct.csv", index=False)
+print("Amostra salva como 'amostra_steel_industry_20pct.csv' com sucesso!\n")
 
 
 # ETAPA B — Análise de Dados e Limiares de Operação

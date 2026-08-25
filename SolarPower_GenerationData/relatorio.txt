@@ -1,0 +1,19 @@
+Dataset 4 — Solar Power Generation Data (Kaggle) 
+
+Situação 
+
+Uma equipe de operação de uma usina fotovoltaica deseja localizar períodos de alta geração e identificar quais inversores aparecem com maior frequência nesses momentos. Nesta atividade, o foco inicial será o arquivo de geração da planta, sem realizar junção com o arquivo de sensores. 
+
+Interpretação da Frequência do Inversor em Alta Geração:
+
+O fato de o inversor inversor_top aparecer com maior frequência no subconjunto de alta geração indica apenas que ele esteve operando acima do limiar de 70% de capacidade por mais janelas de medição durante o período amostrado.
+
+O que esse resultado permite observar:
+
+Observa-se a constância de operação desse equipamento em janelas de pico de irradiação solar.
+
+O que NÃO é possível concluir apenas com esse recorte:
+
+Não é possível concluir maior eficiência ou desempenho superior: Sem cruzar com o arquivo de sensores ambientais (irradiância e temperatura do painel na localização exata do inversor), não sabemos se o inversor recebeu mais luz solar que os demais devido à orientação/sombreamento.
+
+Não indica falha nos outros inversores: Inversores com menor contagem podem ter ficado abaixo de 70% por variações pontuais de sombreamento, diferenças no ângulo de inclinação das strings ou limitações de capacidade nominal.

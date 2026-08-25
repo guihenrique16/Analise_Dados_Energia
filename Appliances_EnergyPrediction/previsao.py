@@ -5,29 +5,29 @@ import numpy as np
 # ETAPA A — Simulando o Orange Data Mining no Python / Pandas 
 
 # https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction
-# df_original = pd.read_csv('AppliancesEnergyPrediction.csv')
+df_original = pd.read_csv('AppliancesEnergyPrediction.csv')
 
-# print("--- [ETAPA A] Dataset Original Carregado ---")
-# print(f"Linhas/Colunas originais: {df_original.shape}")
+print("--- [ETAPA A] Dataset Original Carregado ---")
+print(f"Linhas/Colunas originais: {df_original.shape}")
 
-# # 2. Selecionar Colunas (Widget Select Columns)
-# # Appliances, lights, 3 temperaturas (T1, T2, T3) e 3 umidades (RH_1, RH_2, RH_3)
-# colunas_selecionadas = ['Appliances', 'lights', 'T1', 'T2', 'T3', 'RH_1', 'RH_2', 'RH_3']
-# df_filtrado = df_original[colunas_selecionadas].copy()
+# 2. Selecionar Colunas (Widget Select Columns)
+# Appliances, lights, 3 temperaturas (T1, T2, T3) e 3 umidades (RH_1, RH_2, RH_3)
+colunas_selecionadas = ['Appliances', 'lights', 'T1', 'T2', 'T3', 'RH_1', 'RH_2', 'RH_3']
+df_filtrado = df_original[colunas_selecionadas].copy()
 
-# # 3. Verificar valores ausentes/nulos
-# print("\n--- Verificação de Valores Ausentes ---")
-# print(df_filtrado.isnull().sum())
+# 3. Verificar valores ausentes/nulos
+print("\n--- Verificação de Valores Ausentes ---")
+print(df_filtrado.isnull().sum())
 
-# # 4. Amostragem de 10% (Widget Data Sampler)
-# # random_state=42 garante que a amostra seja idêntica toda vez que rodar
-# amostra = df_filtrado.sample(frac=0.10, random_state=42).reset_index(drop=True)
+# 4. Amostragem de 10% (Widget Data Sampler)
+# random_state=42 garante que a amostra seja idêntica toda vez que rodar
+amostra = df_filtrado.sample(frac=0.10, random_state=42).reset_index(drop=True)
 
-# print(f"\nTamanho da amostra (10%): {amostra.shape}")
+print(f"\nTamanho da amostra (10%): {amostra.shape}")
 
-# # 5. Exportar a amostra para CSV (Widget Save Data)
-# amostra.to_csv("amostra_energydata_10pct.csv", index=False)
-# print("Amostra salva como 'amostra_energydata_10pct.csv' com sucesso!\n")
+# 5. Exportar a amostra para CSV (Widget Save Data)
+amostra.to_csv("amostra_energydata_10pct.csv", index=False)
+print("Amostra salva como 'amostra_energydata_10pct.csv' com sucesso!\n")
 
 
 # ETAPA B — Análise de Dados no Pandas
