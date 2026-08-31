@@ -1,0 +1,15 @@
+Dataset 6 — Individual Household Electric Power Consumption (UCI)
+
+Situação:
+Uma residência possui monitoramento elétrico detalhado e deseja identificar episódios de demanda elevada que também apresentem corrente acima do comportamento médio. O dataset é o mesmo utilizado como referência em aula, mas o critério de análise será diferente.
+
+Análise da inclusão da corrente acima da média:
+    
+    Relação Físico-Elétrica: 
+    Em circuitos de corrente alternada residenciais, a potência ativa está diretamente associada à corrente (Potência =~ Tensão x Corrente). Momentos de pico de potência ativa naturalmente demandam correntes mais elevadas.
+    
+    Efeito do Filtro: 
+    Praticamente a totalidade (ou uma proporção extremamente alta) dos registros com potência ativa acima de 75% já possui, por consequência física, uma corrente bem superior à média geral da residência.
+    
+    Aplicação Prática: 
+    Esse tipo de checagem simultânea ajuda a identificar se eventuais quedas de tensão no sistema elétrico residencial estão ocorrendo justamente nos momentos em que a fiação está submetida a correntes elevadas, reduzindo o risco de sobreaquecimento nos condutores.
