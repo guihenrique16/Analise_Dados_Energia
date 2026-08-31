@@ -1,0 +1,7 @@
+Dataset 5 — Wind & Solar Energy Production (Kaggle)
+
+Situação:
+Um operador de um portfólio de fontes renováveis deseja comparar a ocorrência de períodos de alta produção solar e alta produção eólica. Como as duas fontes possuem escalas próprias, cada uma deverá ser comparada com o seu próprio valor máximo.
+
+Inadequação de utilizar um limite absoluto único para ambas as fontes:
+Usar um único valor numérico (por exemplo, fixar um limite de $500\text{ MW}$) para comparar a produção solar e eólica é incorreto do ponto de vista de engenharia de dados por três razões principais:Diferenças de Capacidade Instalada: Em parques ou regiões energéticas, a capacidade máxima de geração instalada de usinas eólicas frequentemente difere da capacidade de fazendas solares. Se a fonte eólica tiver o triplo da capacidade instalada da fonte solar, um limite fixo absoluto deixará a fonte solar constantemente "abaixo" do limiar, mascarando os seus picos de eficiência.Fator de Capacidade e Dinâmica de Recurso: A energia solar possui uma dinâmica bem definida (geração em formato de curva senoidal durante o dia e nula à noite), enquanto a energia eólica costuma ter ciclos mais contínuos e variantes ao longo de 24 horas.Normalização pela Escala Própria: Avaliar a produção em relação ao próprio valor máximo (ou à capacidade nominal instalada) permite medir o quão próximo a fonte operou do seu potencial máximo de entrega, garantindo uma comparação justa de eficiência operacional entre fontes de grandezas e matrizes operacionais distintas.
